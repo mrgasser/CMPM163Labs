@@ -12,6 +12,49 @@
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
 			// Our Javascript will go here.
+			// basic elements in order to render a scene
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+
+			// Adding a cube
+			var geometry = new THREE.BoxGeometry();
+			var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+     	var cube = new THREE.Mesh(geometry, material);
+			scene.add(cube);
+			camera.position.z = 5; //this moves the camera towards the viewer
+
+			// adding cube 2
+			var geometry2 = new THREE.BoxGeometry();
+			var material2 = new THREE.MeshBasicMaterial( {color: 0x17BAFF});
+			var cube2 = new THREE.Mesh(geometry2, material2);
+			scene.add(cube2);
+
+			// creating and adding cube 3
+			var geometry3 = new THREE.BoxGeometry();
+			var material3 = new THREE.MeshBasicMaterial( {color: 0xEB920D});
+			var cube3 = new THREE.Mesh(geometry3, material3);
+			scene.add(cube3);
+
+			geometry2.translate(1, 0, 0);
+			geometry3.translate(1, -3, -2);
+			geometry2.scale(3, 3, 3);
+			// creating render function and rendering
+			function animate() {
+				requestAnimationFrame(animate);
+				renderer.render(scene, camera);
+				geometry.rotateX(0.01);
+				geometry.rotateY(0.01);
+				geometry2.rotateY(.05);
+				geometry3.rotateX(.06);
+				geometrt3.rotateY(.04);
+
+			}
+			animate();
+
 		</script>
 	</body>
 </html>
