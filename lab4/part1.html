@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 4: Textures & Normal Maps</title>
+		<style>
+			body { margin: 0; }
+			canvas { display: block; }
+		</style>
+	</head>
+	<body>
+		<script src="../three.js-master/build/three.js"></script>
+		<script>
+			// setup the scene
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1, 1000);
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+			camera.position.z = 5;
+
+			// setup the cube
+      var geometry = new THREE.BoxGeometry();
+      var texture = THREE.ImageUtils.loadTexture("197.jpg"); // Texture from file
+      var normMap = THREE.ImageUtils.loadTexture("197_norm.jpg");
+      var material = new THREE.MeshPhongMaterial({map: texture, normalMap: normMap});
+      var cube = new THREE.Mesh(geometry, material);
+     	scene.add(cube);
+
+      // setup second cube
+      material = new THREE.MeshPhongMaterial( { map: texture });
+      var cube2 = new THREE.Mesh(geometry, material);
+      scene.add(cube2);
+      cube2.position.x -= 2;
+
+      // seting up third cube
+      var geometry2 = new THREE.BoxGeometry();
+      var texture2 = THREE.ImageUtils.loadTexture("176.jpg"); // Texture from file
+      var normMap2 = THREE.ImageUtils.loadTexture("176_norm.jpg");
+      var material2 = new THREE.MeshPhongMaterial({map: texture2, normalMap: normMap2});
+      var cube3 = new THREE.Mesh(geometry2, material2);
+      scene.add(cube3);
+      cube3.position.x += 2;
+
+      var x = 10;
+      var z = 10;
+      var end = Math.pi * 2;
+      var i = 0;
+
+			// add the light
+			var light = new THREE.PointLight(0xffffff, 1, 1000);
+			light.position.set(10, 10, 10);
+			scene.add(light);
+
+			function animate() {
+
+				requestAnimationFrame(animate);
+				renderer.render(scene, camera);
+
+        if (i > end) {
+          i = 0;
+        }
+        light.position.x = Math.sin(i) * 10; // finding new position for X
+        light.position.z = Math.cos(i) * 10; // finding new position for Z
+        i += 0.0174533;
+			}
+			animate();
+
+
+		</script>
+	</body>
+</html>
