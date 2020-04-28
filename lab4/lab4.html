@@ -9,6 +9,28 @@
 		</style>
 	</head>
 	<body>
+		<script id="vertexShader" type="x-shader/x-vertex">
+		// code for vertex shader
+		varying vec2 vUv;
+		void main() {
+		  vUv = uv;
+		  vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+		  gl_Position = projectionMatrix * modelViewPosition;
+		}
+		</script>
+
+		<script id="fragmentShader" type="x-shader/x-fragment">
+		// code for fragment shader
+		uniform sampler2D texture1;
+		varying vec2 vUv;
+		void main() {
+				vec4 color0 = texture2D(texture1, mod(vUv,.25) * 4.0);
+		    gl_FragColor = color0;
+				//lowp vec4 col = texture2D( texture1, vec2(mod(vTexCoord.x,1.0), mod(vTexCoord.y,1.0))) * vColor;
+				//gl_FragColor = col;
+		}
+		</script>
+
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
 			// setup the scene
@@ -52,10 +74,8 @@
 
 			function addTextureShaderCube() {
 			if(count == 2) {
-			let uniforms = {
-			        		colorB: {type: 'vec3', value: new THREE.Color(0xACB6E5)},
-			        		colorA: {type: 'vec3', value: new THREE.Color(0x74ebd5)}
-			        	 };
+				var uniforms = {texture1: { type: "t", value: THREE.ImageUtils.loadTexture("165.jpg")}};
+
 
 			      		geometry4 = new THREE.BoxGeometry(1, 1, 1);
 			      		material4 =  new THREE.ShaderMaterial({
@@ -110,6 +130,21 @@
 			      			console.error('An error happened');
 			      		});
 
+
+			// adding 5th cube
+			var uniforms = {texture1: { type: "t", value: THREE.ImageUtils.loadTexture("176.jpg")}};
+			geometry5 = new THREE.BoxGeometry(1, 1, 1);
+			material5 = new THREE.ShaderMaterial({
+			uniforms: uniforms,
+			vertexShader: document.getElementById('vertexShader').textContent,
+			fragmentShader: document.getElementById('fragmentShader').textContent
+			});
+
+			mesh2 = new THREE.Mesh(geometry5, material5);
+			mesh2.position.y = 2;
+			scene.add(mesh2);
+
+
       // varibles for light rotation
 			var end = Math.pi * 2;
 			var i = 0;
@@ -128,6 +163,9 @@
 			}
 			animate();
 
+			</script>
+	</body>
+</html>
 
 		</script>
 	</body>
