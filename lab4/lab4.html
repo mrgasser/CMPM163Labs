@@ -42,15 +42,53 @@
       scene.add(cube3);
       cube3.position.x += 2;
 
-      var x = 10;
-      var z = 10;
-      var end = Math.pi * 2;
-      var i = 0;
-
 			// add the light
 			var light = new THREE.PointLight(0xffffff, 1, 1000);
 			light.position.set(10, 10, 10);
 			scene.add(light);
+
+			THREE.Cache.enabled = true;
+			var count = 0;
+			var loader = new THREE.FileLoader();
+			var fshader, vshader;
+
+			loader.load('shaders/vertexShader.vert',
+			      		// onLoad callback
+			      		function (data) {
+			      			console.log(data); // output the text to the console
+			      			vshader = data;
+			      			count += 1;
+			      			//addTextureShaderCube(); // we will write this method
+			      		},
+			      		// onProgress callback
+			      		function (xhr) {
+			      			console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+			      		},
+			     		// onError callback
+			      		function (err) {
+			      			console.error('An error happened');
+			      		});
+
+			loader.load('shaders/fragmentShader.frag',
+			      		// onLoad callback
+			      		function (data) {
+			      			console.log(data); // output the text to the console
+			      			fshader = data;
+			      			count += 1;
+			      			//addTextureShaderCube(); // we will write this method
+			      		},
+			      		// onProgress callback
+			      		function (xhr) {
+			      			console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+			      		},
+								// onError callback
+			      		function (err) {
+			      			console.error('An error happened');
+			      		});
+
+      // varibles for light rotation
+			var end = Math.pi * 2;
+			var i = 0;
 
 			function animate() {
 
