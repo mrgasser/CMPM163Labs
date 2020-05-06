@@ -14,3 +14,6 @@ https://drive.google.com/file/d/10JaCMBUeMeV_kYXorYjU171EOMglx4Uq/view?usp=shari
 24b. To find the y coordinate value we would take the floor of -7v + 7.  
 24c. from (.375, .25) on the uv grid I got (2, 5) on the texture resulting in the color gray.  
 The cube in the center was made through the lab document instructions, it contains both the texture and the normal. The cube on the right was also made following the insctructions and only contains the texture and not the normal. The cube on the right was created by me using both the normal and the texture but a different ones from the first two cubes. I created this cube similar to the cube in the center by following the document instructions. The cube on the bottom was created by using a fragment shader and vertex shader as described in the document instructions. The final cube above the center cube I created by making my own shaders. In order to make the tiling work I took my vUv and modded it by .25, this is what enable it to be sampled 4 times across. Then I multiplied that by 4 so that it was scalled properly.
+  
+# Lab 5  
+https://drive.google.com/file/d/19Opb6207b40ymbAcgmCqCzBGwMmxvAzi/view?usp=sharing  
