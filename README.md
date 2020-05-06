@@ -17,3 +17,4 @@ The cube in the center was made through the lab document instructions, it contai
   
 # Lab 5  
 https://drive.google.com/file/d/19Opb6207b40ymbAcgmCqCzBGwMmxvAzi/view?usp=sharing  
+For this lab I chose to do the Unity intro. In my game I chose to modify a few things. Firstly I modified the carts speed and colision and boosted both of those. I also changes the skybox to a night sky spacial skybox. I also changed the metrial for the texture of both my ramp and roads to one of the assets that was given to me in my assets folder.
