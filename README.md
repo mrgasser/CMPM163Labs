@@ -23,4 +23,6 @@ For this lab I chose to do the Unity intro. In my game I chose to modify a few t
 
 <img src= "lab6/Screen%20Shot%202020-05-12%20at%203.30.14%20PM.png" width=500 >  
 Lab: https://www.shadertoy.com/view/3sBBRR  
-cool shader: https://www.shadertoy.com/view/wdVGD3
+
+cool shader: https://www.shadertoy.com/view/wdVGD3  
+
