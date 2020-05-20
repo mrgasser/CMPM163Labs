@@ -26,3 +26,7 @@ Lab: https://www.shadertoy.com/view/3sBBRR
 
 cool shader: https://www.shadertoy.com/view/wdVGD3  
 
+# Lab 7  
+
+https://drive.google.com/file/d/1upg0wYk9wEAdymELfp5aevmB0Rxn_pOo/view?usp=sharing  
+
