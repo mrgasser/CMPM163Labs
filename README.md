@@ -36,11 +36,14 @@ I was unfortunately unable to contact my partner.
 I did not recieve help from my partner but did recieve help from another classmate.  
 
 # Lab 8  
-tutorial city  
+Tutorial city  
 <img src= "lab8/Lab8tutorialSC.png" width=500 >  
 
 Inspiration for my city  
 <img src= "lab8/davisposter2.jpg" width=500 >  
 
-My city
-<img src= "lab8/Lab8screenshot.png" width=500 > 
+My city  
+<img src= "lab8/Lab8screenshot.png" width=500 >  
+The inspiration city for me was my hometown of Davis. The main things I took from my inspiration were the suburban infrastruction and flatnes of the town. Therefore in my own model I used some more suburban looking houses along with some of the apartment building from the tutorial. I also included the grass since Davis does have its share of parks and field throughout town.  
+I was once again unfortunately unable to contact my partner.  
+I once again did not recieve help from my partner but did recieve help from another classmate.
