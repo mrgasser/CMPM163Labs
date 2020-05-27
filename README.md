@@ -34,3 +34,6 @@ I choose to do part 1
 I made my scene by following each of the totorials. For my mountain range I decided to go with small hills and created those using a shader with noise on a spehere to create random bumps. To create the water I followed the tutorial to create the wave motion shader and placed the object next to the mountains. In addition to all of this I added a tree and a cloud. I got both of the objects from the asset store but had to change both of their materials in order for them to appear somewhat realistic. I attempted to change the skybox however when attempting to commit git gave me an error that the file size of the skybox exceeded 100MB so I had to remove it.  
 I was unfortunately unable to contact my partner.  
 I did not recieve help from my partner but did recieve help from another classmate.  
+
+# Lab 8  
+<img src= "lab8/Lab8tutorialSC.png" width=500 >
