@@ -36,4 +36,11 @@ I was unfortunately unable to contact my partner.
 I did not recieve help from my partner but did recieve help from another classmate.  
 
 # Lab 8  
-<img src= "lab8/Lab8tutorialSC.png" width=500 >
+tutorial city  
+<img src= "lab8/Lab8tutorialSC.png" width=500 >  
+
+Inspiration for my city  
+<img src= "lab8/davisposter2.jpg" width=500 >  
+
+My city
+<img src= "lab8/Lab8screenshot.png" width=500 > 
